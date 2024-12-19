@@ -5,7 +5,7 @@ from highrise import*
 from highrise import BaseBot,User,CurrencyItem,GetMessagesRequest,Item,Position
 from highrise.models import SessionMetadata
 
-moderators = ["iMooseMoo","Miwiii"]
+moderators = ["iMooseMoo","Miwiii","@___Deborah____“,“@GDARKYO"]
 
 cara = ["😢caiu coroa mais sorte na proxima...","parabens você ganhou caiu cara..."]
 
@@ -62,7 +62,7 @@ class Bot(BaseBot):
         if user.username in moderators:
          await self.highrise.chat(f"🚫{user.username} Moderador(a) da sala\n[Entrou na sala]")
          
-        await self.highrise.send_whisper(user.id,f"🎀")
+        await self.highrise.send_whisper(user.id,f"🎀 Seija bem vindo(a)🎀")
 
         await self.highrise.send_emote(random.choice(emote))
         await self.highrise.send_emote(random.choice(emote),user.id)
@@ -3259,7 +3259,7 @@ Item(type='clothing', amount=1, id='bag-n_registrationavatars2023furrytail', acc
         
     async def on_user_leave(self, user: User) -> None:
         print(f"{user.username} saiu da sala")
-        await self.highrise.chat(f"🎀Volta @{user.username}! 😭")
+        await self.highrise.chat(f"Volta @{user.username}! 😭")
         await self.highrise.send_emote(random.choice(emote))
 
         await asyncio.sleep(100)
