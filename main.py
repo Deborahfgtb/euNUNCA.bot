@@ -56,7 +56,7 @@ react = ["wave","wink","thumbs","heart","clap"]
 class Bot(BaseBot):
     async def on_start(self, session_metadata: SessionMetadata) -> None:
         print("funcionando")  
-        await self.highrise.walk_to(Position(3.5 , 0.5 ,0.5 , "FrontRight"))
+        await self.highrise.walk_to(Position(16 , 0.0 ,13 , "FrontRight"))
     async def on_user_join(self, user: User, position: Position | AnchorPosition) -> None:
         print(f"{user.username} entrou na sala") 
         if user.username in moderators:
